@@ -14,4 +14,6 @@ It runs on my version 4.4.2 phone and tablet but so far I have been unable to tr
 
 See the MP4 files for basic instructions.
 
+To play an MP4 on some Windows versions you would need 'VideoLan' or similar!
 
+http://get.videolan.org/vlc/2.2.1/win32/vlc-2.2.1-win32.exe
