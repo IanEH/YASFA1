@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Y A S F A</string>
+    <color name="dkgrey">#AAAAAA</color>
+    <string name="dynamic_text">This is text added dynamically - inserted into basic linear layout through XML inflation</string>
+</resources>
