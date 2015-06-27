@@ -34,10 +34,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.AudioAttributes;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.Voice;
 import android.util.LayoutDirection;
 import android.util.Log;
 import android.view.Display;
@@ -46,6 +48,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
@@ -61,6 +64,8 @@ import android.widget.HorizontalScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import static java.lang.Thread.sleep;
 
 
 @SuppressLint("NewApi")
@@ -319,9 +324,9 @@ public class InflateView extends Activity {
                   ParentRow = "";
           }
     	} catch (Exception ex) {
-    		
+
     	}
-        // Just a test
+        // Voice say setup
         if (mTts==null) {
             mTts=new TextToSpeech(getApplicationContext(),
                     new TextToSpeech.OnInitListener() {
@@ -329,10 +334,14 @@ public class InflateView extends Activity {
                         public void onInit(int status) {
                             if(status != TextToSpeech.ERROR){
                                 mTts.setLanguage(Locale.UK);
+                                mTts.setPitch(1f);
+                                mTts.setSpeechRate(1.1f);
                             }
                         }
                     });
         }
+
+        // Kill it!
         mKillReceiver = new KillReceiver();
         try {
             registerReceiver(mKillReceiver,
@@ -352,11 +361,7 @@ public class InflateView extends Activity {
 
         scrollable = new  Scrollable(this);
 
-        //mainScrollView = new LScrollView(this);
-        //mainHScrollView = new LHorizontalScrollView(this);
         mainRelativeLayout = new RelativeLayout(this);
-        //mainScrollView.addView(mainHScrollView);
-        //mainScrollView.addView(mainRelativeLayout);
         scrollable.hScroll.addView(mainRelativeLayout);
 
         // Creating a new Left Button with Margin
@@ -364,8 +369,8 @@ public class InflateView extends Activity {
         buttonAdd.setText("Add");
 
         ArrayList<String> spinnerArray = new ArrayList<String>();
-        spinnerArray.add("Label");
         spinnerArray.add("SayIt");
+        spinnerArray.add("Label");
         spinnerArray.add("EditText");
         spinnerArray.add("Button");
         spinnerArray.add("CheckBox");
@@ -471,7 +476,7 @@ public class InflateView extends Activity {
 
         mainRelativeLayout.addView(topv);
         mainv.addView(scrollable);
-        
+
         RelativeLayout.LayoutParams relativeLayoutParameters = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT);
         setContentView(mainv, relativeLayoutParameters);
 
@@ -486,24 +491,28 @@ public class InflateView extends Activity {
     	topv.bringToFront();
         DBInterface dbz = new DBInterface();
         dbz.setBaseContext(MainView);
-        if (MainView.RowID!=-1) {
-            dbz.Save(MainView.RowID,MainView.ParentRowID, formName, mainRelativeLayout);
-        }
 
-        SharedPreferences YASFAState = context.getSharedPreferences("YASFAState", MODE_PRIVATE);
-        if (YASFAState.getString("FORMNAME", "").equals("")) {
-            MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.First);
-        } if (YASFAState.getString("FORMNAME", "").equals(formName) && MainView.ParentRowID == YASFAState.getLong("PARENTROWID",-1L)) {
-            MainView.RowID = YASFAState.getLong("ROWID",-1L);
-            MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.This);
-        } else {
-            MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.First);
-        }
+
+            if (MainView.RowID != -1) {
+                dbz.Save(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout);
+            }
+
+            SharedPreferences YASFAState = context.getSharedPreferences("YASFAState", MODE_PRIVATE);
+            if (YASFAState.getString("FORMNAME", "").equals("")) {
+                MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.First);
+            }
+            if (YASFAState.getString("FORMNAME", "").equals(formName) && MainView.ParentRowID == YASFAState.getLong("PARENTROWID", -1L)) {
+                MainView.RowID = YASFAState.getLong("ROWID", -1L);
+                MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.This);
+            } else {
+                MainView.RowID = dbz.Get(MainView.RowID, MainView.ParentRowID, formName, mainRelativeLayout, Direction.First);
+            }
+
         Refresh(MainView.ParentRowID);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         EditText  dummy = new EditText(this);
-        SetLayout(dummy, RelativeLayout.ALIGN_PARENT_TOP,1,0,0,0,-1,-1);
+        SetLayout(dummy, RelativeLayout.ALIGN_PARENT_TOP,0,0,0,0,-1,-1);
         mainRelativeLayout.addView(dummy);
     }
 
@@ -748,8 +757,8 @@ public class InflateView extends Activity {
                 int x = (int)event.getX() + scrollable.vScroll.getScrollX();
                 int y = (int)event.getY() + scrollable.hScroll.getScrollY();
                 switch (event.getAction()) {
-                    case MotionEvent.ACTION_MOVE:
                     case MotionEvent.ACTION_DOWN:
+                    case MotionEvent.ACTION_MOVE:
                         for(int i=mainRelativeLayout.getChildCount()-1;i>=0;i--) {
                             View child = mainRelativeLayout.getChildAt(i);
                             RelativeLayout.LayoutParams LayoutParameters = (RelativeLayout.LayoutParams) child.getLayoutParams();
@@ -760,13 +769,28 @@ public class InflateView extends Activity {
                                     && ypos >= LayoutParameters.topMargin && ypos <= LayoutParameters.topMargin + child.getHeight()) {
                                 if (child instanceof PictureLayout) {
                                 } else if (child instanceof YASFAControl) {
-                                    Say(((YASFAControl) child).SayText());
+                                    if (event.getAction()==MotionEvent.ACTION_DOWN && (child instanceof ButtonLayout)) {
+                                        Selected = child;
+                                        // Suppress when button click!
+                                    } else {
+                                        if (!(child instanceof ButtonLayout)) {
+                                            Selected = null;
+                                        }
+                                        if (Selected == child) {
+
+                                        } else {
+                                            if (((YASFAControl)child).DoSay(xpos -LayoutParameters.leftMargin , ypos - LayoutParameters.topMargin ))
+                                            Say(((YASFAControl) child).SayText());
+                                        }
+                                    }
                                 }
                             }
                         }
                         break;
                     case MotionEvent.ACTION_UP:
+                        Selected = null;
                         lasttext="";
+                        break;
                 }
 
             }
@@ -823,7 +847,9 @@ public class InflateView extends Activity {
     private final class KillReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
-            finish();
+            try {
+                finish();
+            } catch (Exception ex) {}
         }
     }
 
@@ -984,10 +1010,6 @@ public class InflateView extends Activity {
                                 nfile = nfile.replace(".app", "D.db");
                                 Utils.copyFromSD(MainView, nfile, "YASFAD.db");
 
-                                Intent intent = new Intent("kill");
-                                intent.setType("text/plain");
-                                sendBroadcast(intent);
-
                                 SharedPreferences YASFAState = MainView.getSharedPreferences("YASFAState", MODE_PRIVATE);
                                 SharedPreferences.Editor ed = YASFAState.edit();
                                 ed.clear();
@@ -995,6 +1017,10 @@ public class InflateView extends Activity {
                                 ed.putLong("PARENTROWID", -1L);
                                 ed.putString("FORMNAME", "");
                                 ed.commit();
+
+                                Intent intent = new Intent("kill");
+                                intent.setType("text/plain");
+                                sendBroadcast(intent);
 
                                 Intent myIntent = new Intent(MainView, InflateView.class);
                                 myIntent.putExtra("formName", "Menu"); //Optional parameters

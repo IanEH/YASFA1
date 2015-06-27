@@ -113,6 +113,7 @@ public class DrawLayout extends YASFAControl{
 
         mdraw = new Draw(context);
         mdraw.setBackgroundColor(Color.WHITE);
+
         mView.addView(mdraw, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
         addView(mView);
 
@@ -170,7 +171,7 @@ public class DrawLayout extends YASFAControl{
         rub.setShadowLayer(1.5f, -1, 1, Color.BLACK);
         rub.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.THICK_WIDTH);
                 mdraw.paint.setColor(Color.WHITE);
@@ -188,7 +189,7 @@ public class DrawLayout extends YASFAControl{
         b.setBackgroundColor(Color.BLACK);
         b.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.BLACK);
@@ -205,7 +206,7 @@ public class DrawLayout extends YASFAControl{
         r.setBackgroundColor(Color.RED);
         r.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.RED);
@@ -222,7 +223,7 @@ public class DrawLayout extends YASFAControl{
         gr.setBackgroundColor(Color.GREEN);
         gr.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.GREEN);
@@ -239,7 +240,7 @@ public class DrawLayout extends YASFAControl{
         bl.setBackgroundColor(Color.BLUE);
         bl.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.BLUE);
@@ -256,7 +257,7 @@ public class DrawLayout extends YASFAControl{
         y.setBackgroundColor(Color.YELLOW);
         y.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.YELLOW);
@@ -273,7 +274,7 @@ public class DrawLayout extends YASFAControl{
         ma.setBackgroundColor(Color.MAGENTA);
         ma.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                removeView(menu);
+                mView.removeView(menu);
                 SetValue(GetByteValue());
                 mdraw.paint.setStrokeWidth(mdraw.STROKE_WIDTH);
                 mdraw.paint.setColor(Color.MAGENTA);

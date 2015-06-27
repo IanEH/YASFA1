@@ -20,7 +20,9 @@ package com.yasfa.views;
 
 import android.content.Context;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import java.util.UUID;
 
@@ -41,6 +43,10 @@ public class YASFAControl extends LinearLayout {
     }
 
     public void SetSize(int width,int height) {
+    }
+
+    public boolean DoSay (int x,int y) {
+        return true;
     }
 
     public String SayText() {

@@ -26,6 +26,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
@@ -70,27 +72,28 @@ public class ControlLayout extends YASFAControl {
                 params.width = width;
             }
         } catch (Exception ex) { // its a label!
-            try {
-                YEditText child = (YEditText) this.getChildAt(0);
-                ViewGroup.LayoutParams params = child.getLayoutParams();
-                params.height = height;
-                params.width = width;
-                if (height>25) {
-                    int size = height - (height/3);
-                    int sizew = ((width*2)/child.getText().toString().length());
-                    if (sizew<size)  size=sizew;
-                    if (size<14) size=14;
-                    child.setTextSize(size);
-                } else {
-                    child.setTextSize(14);
-                }
 
-            } catch (Exception ex1) { // its a label!
-            }
+
             String sex=ex.getMessage();
         }
     }
 
+    public boolean DoSay (int xpos,int ypos) {
+        View np=this.getChildAt(1);
+        if (np instanceof NumberPicker) {
+            int count = ((NumberPicker)np).getChildCount();
+            for (int i = 0; i < count; i++) {
+                final View child = ((NumberPicker)np).getChildAt(i);
+                if (child instanceof ImageButton) {
+                    if (ypos >= child.getY() && ypos <= child.getY() + child.getHeight()) {
+                            return false;
+                    }
+                }
+
+            }
+        }
+        return true;
+    }
 
 
     public String GetValue() {

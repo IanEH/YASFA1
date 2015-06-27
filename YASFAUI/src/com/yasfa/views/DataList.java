@@ -721,7 +721,7 @@ public class DataList extends YASFAControl {
                     MainView.RowID = dbz.Get(Long.parseLong(obj_itemDetails.getName()), MainView.ParentRowID, formName, mainRelativeLayout, Direction.This);
 
                     DBInterface.Row row = dbz.GetList(MainView.RowID, mcontext.ParentRowID, mformName, mmainRelativeLayout, "", false);
-                    MainView.Say(stripComa(row.text));
+                    //MainView.Say(stripComa(row.text)); Add mode for this?
 
 
                     for (int i = mainRelativeLayout.getChildCount() - 1; i >= 0; i--) {
