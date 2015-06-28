@@ -45,12 +45,9 @@
       <file leaf-file-name="YASFAControl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1496">
-              <caret line="47" column="22" selection-start-line="47" selection-start-column="3" selection-end-line="48" selection-end-column="2" />
-              <folding>
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="1955">
+              <caret line="81" column="9" selection-start-line="81" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,109 +55,73 @@
       <file leaf-file-name="YEditText.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1088">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1428">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawLayout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DrawLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="6664">
-              <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#15281#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InflateView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="InflateView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5945945" vertical-offset="5910" max-vertical-offset="22661">
-              <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.37258348" vertical-offset="2015" max-vertical-offset="20230">
+              <caret line="203" column="51" selection-start-line="203" selection-start-column="51" selection-end-line="203" selection-end-column="51" />
               <folding>
-                <element signature="e#0#53519#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#3932#3933#0" expanded="true" />
-                <element signature="e#3968#3969#0" expanded="true" />
-                <element signature="e#4639#4640#0" expanded="true" />
-                <element signature="e#4675#4676#0" expanded="true" />
-                <element signature="e#5204#5205#0" expanded="true" />
-                <element signature="e#5261#5262#0" expanded="true" />
-                <element signature="e#10246#10682#0" expanded="true" />
-                <element signature="e#10659#10660#0" expanded="true" />
-                <element signature="e#11583#11591#0" expanded="true" />
-                <element signature="e#12452#12460#0" expanded="true" />
-                <element signature="e#13918#14558#0" expanded="true" />
-                <element signature="e#14547#14548#0" expanded="true" />
-                <element signature="e#14671#15771#0" expanded="true" />
-                <element signature="e#14849#15486#0" expanded="true" />
-                <element signature="e#15469#15470#0" expanded="true" />
-                <element signature="e#15760#15761#0" expanded="true" />
-                <element signature="e#15867#16026#0" expanded="true" />
-                <element signature="e#16015#16016#0" expanded="true" />
-                <element signature="e#20366#20367#0" expanded="true" />
-                <element signature="e#20420#20421#0" expanded="true" />
-                <element signature="e#20444#20445#0" expanded="true" />
-                <element signature="e#20498#20499#0" expanded="true" />
-                <element signature="e#33311#36225#0" expanded="true" />
-                <element signature="e#34379#35900#0" expanded="true" />
-                <element signature="e#35881#35882#0" expanded="true" />
-                <element signature="e#35945#36136#0" expanded="true" />
-                <element signature="e#36117#36118#0" expanded="true" />
-                <element signature="e#36213#36214#0" expanded="true" />
-                <element signature="e#36323#38876#0" expanded="true" />
-                <element signature="e#37731#38551#0" expanded="true" />
-                <element signature="e#38045#38474#0" expanded="true" />
-                <element signature="e#38447#38448#0" expanded="true" />
-                <element signature="e#38532#38533#0" expanded="true" />
-                <element signature="e#38596#38787#0" expanded="true" />
-                <element signature="e#38768#38769#0" expanded="true" />
-                <element signature="e#38864#38865#0" expanded="true" />
-                <element signature="e#38966#41083#0" expanded="true" />
-                <element signature="e#39393#40819#0" expanded="true" />
-                <element signature="e#40792#40793#0" expanded="true" />
-                <element signature="e#41071#41072#0" expanded="true" />
-                <element signature="e#41326#41776#0" expanded="true" />
-                <element signature="e#41761#41762#0" expanded="true" />
-                <element signature="e#41874#44799#0" expanded="true" />
-                <element signature="e#43759#44436#0" expanded="true" />
-                <element signature="e#44413#44414#0" expanded="true" />
-                <element signature="e#44485#44696#0" expanded="true" />
-                <element signature="e#44673#44674#0" expanded="true" />
-                <element signature="e#44784#44785#0" expanded="true" />
-                <element signature="e#44971#45359#0" expanded="true" />
-                <element signature="e#45340#45341#0" expanded="true" />
-                <element signature="e#45469#48205#0" expanded="true" />
-                <element signature="e#47526#47842#0" expanded="true" />
-                <element signature="e#47819#47820#0" expanded="true" />
-                <element signature="e#47891#48102#0" expanded="true" />
-                <element signature="e#48079#48080#0" expanded="true" />
-                <element signature="e#48190#48191#0" expanded="true" />
-                <element signature="e#48521#51655#0" expanded="true" />
-                <element signature="e#49773#51312#0" expanded="true" />
-                <element signature="e#50521#51253#0" expanded="true" />
-                <element signature="e#51218#51219#0" expanded="true" />
-                <element signature="e#51285#51286#0" expanded="true" />
-                <element signature="e#51640#51641#0" expanded="true" />
-                <element signature="e#52132#52418#0" expanded="true" />
-                <element signature="e#52402#52403#0" expanded="true" />
-                <element signature="e#53058#53417#0" expanded="true" />
-                <element signature="e#53398#53399#0" expanded="true" />
+                <element signature="e#21467#21468#0" expanded="true" />
+                <element signature="e#21521#21522#0" expanded="true" />
+                <element signature="e#21545#21546#0" expanded="true" />
+                <element signature="e#21599#21600#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ButtonLayout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ButtonLayout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="5644">
+              <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlManage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlManage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="901" max-vertical-offset="11203">
+              <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SayLayout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="2924">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35581395" vertical-offset="0" max-vertical-offset="476">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DataList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6137" max-vertical-offset="13855">
+              <caret line="361" column="16" selection-start-line="361" selection-start-column="16" selection-end-line="361" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -169,32 +130,8 @@
       <file leaf-file-name="PictureList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/PictureList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="8619">
-              <caret line="106" column="22" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#21903#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DataList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.918919" vertical-offset="10715" max-vertical-offset="12410">
-              <caret line="725" column="0" selection-start-line="725" selection-start-column="0" selection-end-line="725" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#33837#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://E:/Android/sdk/sources/android-21/android/app/ActivityThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="23105" max-vertical-offset="85918">
-              <caret line="1535" column="0" selection-start-line="1535" selection-start-column="0" selection-end-line="1535" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6987" max-vertical-offset="9826">
+              <caret line="411" column="16" selection-start-line="411" selection-start-column="16" selection-end-line="411" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -203,20 +140,8 @@
       <file leaf-file-name="ControlLayout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.918919" vertical-offset="1036" max-vertical-offset="3995">
-              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9053#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewRootImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://E:/Android/sdk/sources/android-21/android/view/ViewRootImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="101290" max-vertical-offset="113781">
-              <caret line="6120" column="0" selection-start-line="6120" selection-start-column="0" selection-end-line="6120" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3366" max-vertical-offset="4828">
+              <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -266,7 +191,6 @@
         <option value="$PROJECT_DIR$/src/com/yasfa/views/PictureList.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/RadioLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/RecordPlay.java" />
-        <option value="$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/SliderLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/SpinnerLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/TimeButton.java" />
@@ -274,10 +198,11 @@
         <option value="$PROJECT_DIR$/src/com/yasfa/views/YEditText.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/DrawLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/DataList.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java" />
+        <option value="$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/InflateView.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -318,9 +243,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,6 +307,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-ldpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YASFAUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -422,6 +398,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -682,15 +661,14 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4165605" sideWeight="0.8576799" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.028801844" sideWeight="0.6079484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39900866" sideWeight="0.48744643" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29608294" sideWeight="0.5021482" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28686637" sideWeight="0.49785176" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46198156" sideWeight="0.49785176" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28686637" sideWeight="0.49785176" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46198156" sideWeight="0.49785176" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -704,6 +682,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.056962024" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41589862" sideWeight="0.8576799" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976957" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -949,12 +928,6 @@
           <option name="timeStamp" value="389" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java</url>
-          <line>685</line>
-          <properties />
-          <option name="timeStamp" value="402" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java</url>
           <line>85</line>
           <properties />
@@ -966,6 +939,18 @@
           <properties />
           <option name="timeStamp" value="409" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yasfa/views/ButtonLayout.java</url>
+          <line>154</line>
+          <properties />
+          <option name="timeStamp" value="411" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="412" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/yasfa/views/TouchImageView.java</url>
           <line>438</line>
@@ -976,18 +961,18 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="411" />
+      <option name="time" value="414" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout/liststyle.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.444445" vertical-offset="0" max-vertical-offset="527">
           <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/my_drawable.xml">
@@ -998,13 +983,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/drawable.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="306">
           <caret line="8" column="96" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi">
@@ -1102,15 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="132107" max-vertical-offset="347888">
           <caret line="7972" column="0" selection-start-line="7972" selection-start-column="0" selection-end-line="7972" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ButtonLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5066">
-          <caret line="3" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1121,16 +1097,6 @@
           <folding>
             <element signature="e#0#27661#0" expanded="true" />
             <element signature="e#20134#20166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlManage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10812">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#32044#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1218,9 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3791">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#8440#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,15 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9877">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2193">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,7 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="3791">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1260,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1734">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1268,7 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,7 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17291" max-vertical-offset="31280">
           <caret line="1099" column="0" selection-start-line="1099" selection-start-column="0" selection-end-line="1099" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,48 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85635" max-vertical-offset="101830">
           <caret line="5264" column="0" selection-start-line="5264" selection-start-column="0" selection-end-line="5264" selection-end-column="0" />
-          <folding>
-            <element signature="e#221939#221940#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DataList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.918919" vertical-offset="10715" max-vertical-offset="12410">
-          <caret line="725" column="0" selection-start-line="725" selection-start-column="0" selection-end-line="725" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33837#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/PictureList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="8619">
-          <caret line="106" column="22" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#21903#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1496">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="3" selection-end-line="48" selection-end-column="2" />
-          <folding>
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,9 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="6664">
           <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#15281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1359,7 +1264,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="23462" max-vertical-offset="85918">
           <caret line="1535" column="0" selection-start-line="1535" selection-start-column="0" selection-end-line="1535" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,102 +1271,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="101290" max-vertical-offset="113781">
           <caret line="6120" column="0" selection-start-line="6120" selection-start-column="0" selection-end-line="6120" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1088">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/PictureList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5424" max-vertical-offset="8364">
+          <caret line="411" column="16" selection-start-line="411" selection-start-column="16" selection-end-line="411" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DataList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5029" max-vertical-offset="12155">
+          <caret line="361" column="16" selection-start-line="361" selection-start-column="16" selection-end-line="361" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="1479">
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ButtonLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2129" max-vertical-offset="5066">
+          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="2329">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.918919" vertical-offset="1036" max-vertical-offset="3995">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9053#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="4828">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="426" max-vertical-offset="10812">
+          <caret line="53" column="85" selection-start-line="53" selection-start-column="85" selection-end-line="53" selection-end-column="85" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5945945" vertical-offset="5910" max-vertical-offset="22661">
-          <caret line="362" column="0" selection-start-line="362" selection-start-column="0" selection-end-line="362" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.37258348" vertical-offset="2015" max-vertical-offset="20230">
+          <caret line="203" column="51" selection-start-line="203" selection-start-column="51" selection-end-line="203" selection-end-column="51" />
           <folding>
-            <element signature="e#0#53519#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#3932#3933#0" expanded="true" />
-            <element signature="e#3968#3969#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
-            <element signature="e#4675#4676#0" expanded="true" />
-            <element signature="e#5204#5205#0" expanded="true" />
-            <element signature="e#5261#5262#0" expanded="true" />
-            <element signature="e#10246#10682#0" expanded="true" />
-            <element signature="e#10659#10660#0" expanded="true" />
-            <element signature="e#11583#11591#0" expanded="true" />
-            <element signature="e#12452#12460#0" expanded="true" />
-            <element signature="e#13918#14558#0" expanded="true" />
-            <element signature="e#14547#14548#0" expanded="true" />
-            <element signature="e#14671#15771#0" expanded="true" />
-            <element signature="e#14849#15486#0" expanded="true" />
-            <element signature="e#15469#15470#0" expanded="true" />
-            <element signature="e#15760#15761#0" expanded="true" />
-            <element signature="e#15867#16026#0" expanded="true" />
-            <element signature="e#16015#16016#0" expanded="true" />
-            <element signature="e#20366#20367#0" expanded="true" />
-            <element signature="e#20420#20421#0" expanded="true" />
-            <element signature="e#20444#20445#0" expanded="true" />
-            <element signature="e#20498#20499#0" expanded="true" />
-            <element signature="e#33311#36225#0" expanded="true" />
-            <element signature="e#34379#35900#0" expanded="true" />
-            <element signature="e#35881#35882#0" expanded="true" />
-            <element signature="e#35945#36136#0" expanded="true" />
-            <element signature="e#36117#36118#0" expanded="true" />
-            <element signature="e#36213#36214#0" expanded="true" />
-            <element signature="e#36323#38876#0" expanded="true" />
-            <element signature="e#37731#38551#0" expanded="true" />
-            <element signature="e#38045#38474#0" expanded="true" />
-            <element signature="e#38447#38448#0" expanded="true" />
-            <element signature="e#38532#38533#0" expanded="true" />
-            <element signature="e#38596#38787#0" expanded="true" />
-            <element signature="e#38768#38769#0" expanded="true" />
-            <element signature="e#38864#38865#0" expanded="true" />
-            <element signature="e#38966#41083#0" expanded="true" />
-            <element signature="e#39393#40819#0" expanded="true" />
-            <element signature="e#40792#40793#0" expanded="true" />
-            <element signature="e#41071#41072#0" expanded="true" />
-            <element signature="e#41326#41776#0" expanded="true" />
-            <element signature="e#41761#41762#0" expanded="true" />
-            <element signature="e#41874#44799#0" expanded="true" />
-            <element signature="e#43759#44436#0" expanded="true" />
-            <element signature="e#44413#44414#0" expanded="true" />
-            <element signature="e#44485#44696#0" expanded="true" />
-            <element signature="e#44673#44674#0" expanded="true" />
-            <element signature="e#44784#44785#0" expanded="true" />
-            <element signature="e#44971#45359#0" expanded="true" />
-            <element signature="e#45340#45341#0" expanded="true" />
-            <element signature="e#45469#48205#0" expanded="true" />
-            <element signature="e#47526#47842#0" expanded="true" />
-            <element signature="e#47819#47820#0" expanded="true" />
-            <element signature="e#47891#48102#0" expanded="true" />
-            <element signature="e#48079#48080#0" expanded="true" />
-            <element signature="e#48190#48191#0" expanded="true" />
-            <element signature="e#48521#51655#0" expanded="true" />
-            <element signature="e#49773#51312#0" expanded="true" />
-            <element signature="e#50521#51253#0" expanded="true" />
-            <element signature="e#51218#51219#0" expanded="true" />
-            <element signature="e#51285#51286#0" expanded="true" />
-            <element signature="e#51640#51641#0" expanded="true" />
-            <element signature="e#52132#52418#0" expanded="true" />
-            <element signature="e#52402#52403#0" expanded="true" />
-            <element signature="e#53058#53417#0" expanded="true" />
-            <element signature="e#53398#53399#0" expanded="true" />
+            <element signature="e#21467#21468#0" expanded="true" />
+            <element signature="e#21521#21522#0" expanded="true" />
+            <element signature="e#21545#21546#0" expanded="true" />
+            <element signature="e#21599#21600#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35581395" vertical-offset="0" max-vertical-offset="476">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

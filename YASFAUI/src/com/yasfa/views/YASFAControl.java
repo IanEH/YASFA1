@@ -80,6 +80,7 @@ public class YASFAControl extends LinearLayout {
 
 
     public void EditFocus (boolean edit) {
+
     }
 
     public void Edit (boolean edit) {

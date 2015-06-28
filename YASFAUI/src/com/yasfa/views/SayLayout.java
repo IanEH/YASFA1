@@ -94,7 +94,30 @@ public class SayLayout extends YASFAControl {
         } catch (Exception ex) {}
         return "";
     }
-	@SuppressLint("NewApi")
+
+    public void EditFocus(boolean edit) {
+        if(label==null)
+        { // Brok so fix it!
+            label = new EditText(mcontext);
+            addView(label);
+        }
+
+        if (edit) {
+            label.setClickable(true);
+            label.setEnabled(true);
+            label.setFocusable(true);
+            label.setFocusableInTouchMode(true);
+        }
+        else
+        {
+            label.setClickable(false);
+            label.setEnabled(false);
+            label.setFocusable(false);
+            label.setFocusableInTouchMode(false);
+        }
+    }
+
+    @SuppressLint("NewApi")
     public void Edit (boolean edit) {
          if (label==null) { // Brock so fix it!
             label=new EditText(mcontext);

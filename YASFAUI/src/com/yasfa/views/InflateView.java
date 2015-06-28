@@ -51,6 +51,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -82,6 +83,8 @@ public class InflateView extends Activity {
     FButton buttonEdit;
 	Button buttonAdd;
 	Button buttonDel;
+
+    EditText  dummy;
 
     static int gridx=1;
     static int gridy=1;
@@ -185,61 +188,78 @@ public class InflateView extends Activity {
             this.addView(vScroll);
         }
 
-        public int getSX() {
-            return (int) hScroll.getScrollX();
-        }
 
-        public int getSY() {
-            return (int) vScroll.getScrollY();
-
-        }
-
-        public void Scroll(int sx,int sy) {
-            vScroll.scrollTo(sx,sy);
-            hScroll.scrollTo(sx,sy);
-        }
 
         @Override
         public boolean onTouchEvent(MotionEvent event) {
 
-            switch (event.getAction()) {
+
+                switch (event.getAction()) {
 
                 case MotionEvent.ACTION_DOWN:
+                    if (Editing) {
+                        try { // Clear any focus
+                            View editText = getWindow().getCurrentFocus();
+                            InputMethodManager imm = (InputMethodManager) getSystemService(
+                                    Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                            editText.clearFocus();
+                        } catch (Exception ex) {}
+                    }
                     holdspeak=speak;
                     speak = false;
                     mx = event.getX();
                     my = event.getY();
+                    fastX = 0;
+                    fastY = 0;
+                    n = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
                     curX = event.getX();
                     curY = event.getY();
-                    if (mx - curX>4 || mx - curX<-4) {
-                        fastX = fastX + (mx - curX) / 4 ;
-                        n=n+2;
+                    if (!Editing) { // Accelerate
+                        if (mx - curX > 4 || mx - curX < -4) {
+                            fastX = fastX + (mx - curX) / 4;
+                            n = n + 2;
+                        } else {
+                            fastX = 0;
+                            n = 0;
+                        }
+                        if (my - curY > 4 || my - curY < -4) {
+                            fastY = fastX + (my - curY) / 4;
+                            n = n + 2;
+                        } else {
+                            fastY = 0;
+                            n = 0;
+                        }
+                        if (fastX > 3) fastX = 3; // Not to fast!
+                        if (fastY > 3) fastY = 3;
+                        if (fastX < -3) fastX = -3; // Not to fast!
+                        if (fastY < -3) fastY = -3;
                     }
-                    else {
-                        fastX = 0;
-                        n=0;
-                    }
-                    if (my - curY>4 || my - curY<-4) {
-                        fastY = fastX + (my - curY) / 4;
-                        n = n + 2;
-                    } else {
-                        fastY = 0;
-                        n=0;
-                    }
-                    if (fastX > 3) fastX = 3; // Not to fast!
-                    if (fastY > 3) fastY = 3;
-                    if (fastX < -3) fastX = -3; // Not to fast!
-                    if (fastY < -3) fastY = -3;
                     vScroll.scrollBy((int) ((mx - curX)+fastX), (int) ((my - curY)+fastY));
                     hScroll.scrollBy((int) ((mx - curX)+fastX), (int) ((my - curY)+fastY));
                     mx = curX;
                     my = curY;
                     break;
                 case MotionEvent.ACTION_UP:
+
                     speak = holdspeak;
-                      curX = event.getX();
+                    if (Editing) {
+                        try { // Clear any focus
+                            View editText = getWindow().getCurrentFocus();
+                            InputMethodManager imm = (InputMethodManager) getSystemService(
+                                    Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                            editText.clearFocus();
+                        } catch (Exception ex) {}
+                    }
+                    if (Editing) { // Move the menu!
+                        Display display = ((WindowManager)MainView.getApplicationContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+                        SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX()+5, scrollable.hScroll.getScrollY()+5, 0, 0, display.getWidth()-20, 0);
+                    }
+
+                    curX = event.getX();
                     curY = event.getY();
                     while (n>0) {
                         vScroll.scrollBy((int) ((mx - curX) + fastX), (int) ((my - curY) + fastY));
@@ -249,14 +269,6 @@ public class InflateView extends Activity {
                     fastX = 0;
                     fastY = 0;
                     break;
-            }
-            if (Editing) {
-                if (topv.getX()<scrollable.vScroll.getScrollX() || topv.getY()<scrollable.hScroll.getScrollY())
-                    SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX()+5, scrollable.hScroll.getScrollY()+5, 0, 0,0,0);
-                Display display = ((WindowManager)MainView.getApplicationContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-                if (topv.getY() + topv.getHeight() > display.getHeight()+scrollable.hScroll.getScrollY() || topv.getX()+topv.getWidth()-5 > display.getWidth() +scrollable.vScroll.getScrollX())  {
-                    SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX(), scrollable.hScroll.getScrollY()+5, 0, 0,0,0);
-                }
             }
             return true;
         }
@@ -434,6 +446,16 @@ public class InflateView extends Activity {
                     editMoveOnly = true;
                     getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
                     MainView.buttonEdit.setBackgroundResource(R.drawable.a2);
+
+                    try {
+                        View editText = getWindow().getCurrentFocus();
+                        InputMethodManager imm = (InputMethodManager) getSystemService(
+                                Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                        editText.clearFocus();
+
+
+                    } catch (Exception ex) {}
                 }
             }
         });
@@ -511,9 +533,10 @@ public class InflateView extends Activity {
         Refresh(MainView.ParentRowID);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        EditText  dummy = new EditText(this);
-        SetLayout(dummy, RelativeLayout.ALIGN_PARENT_TOP,0,0,0,0,-1,-1);
+        dummy = new EditText(this);
+        SetLayout(dummy, RelativeLayout.ALIGN_PARENT_TOP,1,0,0,0,-1,-1);
         mainRelativeLayout.addView(dummy);
+        dummy.requestFocus();
     }
 
     @Override
@@ -1206,10 +1229,15 @@ public class InflateView extends Activity {
         if (LockCode==null) LockCode="";
         if (LockCode.equals(""))  {
             final MenuItem item1 = menu.add ("Design");
-            if (Editing)
+            if (Editing) {
+                dummy.setEnabled(false);
                 item1.setTitle("Run");
-            else
+            }
+            else {
+                dummy.setEnabled(true);
+                dummy.requestFocus();
                 item1.setTitle("Design");
+            }
 
             item1.setOnMenuItemClickListener (new MenuItem.OnMenuItemClickListener(){
                 @Override

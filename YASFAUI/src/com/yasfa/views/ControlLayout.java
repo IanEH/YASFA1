@@ -36,17 +36,17 @@ import android.widget.ToggleButton;
 import android.widget.CheckBox;
 
 public class ControlLayout extends YASFAControl {
-	public String Name;
+    public String Name;
 
-	
-	public ControlLayout(InflateView context) {
-		super(context);
 
-	}
+    public ControlLayout(InflateView context) {
+        super(context);
 
-	public void NewName() {
-		Name="A"+UUID.randomUUID().toString().replace("-","");
-	}
+    }
+
+    public void NewName() {
+        Name = "A" + UUID.randomUUID().toString().replace("-", "");
+    }
 
     public void SetSize(int width, int height) {
         try {
@@ -74,19 +74,19 @@ public class ControlLayout extends YASFAControl {
         } catch (Exception ex) { // its a label!
 
 
-            String sex=ex.getMessage();
+            String sex = ex.getMessage();
         }
     }
 
-    public boolean DoSay (int xpos,int ypos) {
-        View np=this.getChildAt(1);
+    public boolean DoSay(int xpos, int ypos) {
+        View np = this.getChildAt(1);
         if (np instanceof NumberPicker) {
-            int count = ((NumberPicker)np).getChildCount();
+            int count = ((NumberPicker) np).getChildCount();
             for (int i = 0; i < count; i++) {
-                final View child = ((NumberPicker)np).getChildAt(i);
+                final View child = ((NumberPicker) np).getChildAt(i);
                 if (child instanceof ImageButton) {
                     if (ypos >= child.getY() && ypos <= child.getY() + child.getHeight()) {
-                            return false;
+                        return false;
                     }
                 }
 
@@ -97,59 +97,63 @@ public class ControlLayout extends YASFAControl {
 
 
     public String GetValue() {
-		String retval="";
-        View child=this.getChildAt(1);
+        String retval = "";
+        View child = this.getChildAt(1);
         if (child instanceof EditText) {
-            retval = ((EditText)child).getText().toString();
+            retval = ((EditText) child).getText().toString();
         } else if (child instanceof NumberPicker) {
-            ((NumberPicker)child).clearFocus();
-            retval = new Integer(((NumberPicker)child).getValue()).toString();
+            ((NumberPicker) child).clearFocus();
+            retval = new Integer(((NumberPicker) child).getValue()).toString();
         } else if (child instanceof ToggleButton) {
-			if (((ToggleButton)child).isChecked())
+            if (((ToggleButton) child).isChecked())
                 retval = "True";
-			else
-				retval = "False";
-		} else if (child instanceof CheckBox) {
-			if (((CheckBox)child).isChecked())
-				retval = "True";
-			else
-				retval = "False";
+            else
+                retval = "False";
+        } else if (child instanceof CheckBox) {
+            if (((CheckBox) child).isChecked())
+                retval = "True";
+            else
+                retval = "False";
         } else if (child instanceof LinearLayout) {
-            child=((LinearLayout)child).getChildAt(0);
+            child = ((LinearLayout) child).getChildAt(0);
             retval = ((EditText) child).getText().toString();
         }
-		return retval;
-	}
-	public void SetValue(String value) {
-		String retval="";
-		View child=this.getChildAt(1);
-		if (child instanceof EditText) {
-            ((EditText)child).setText(value);
+        return retval;
+    }
+
+    public void SetValue(String value) {
+        String retval = "";
+        View child = this.getChildAt(1);
+        if (child instanceof EditText) {
+            ((EditText) child).setText(value);
 
         } else if (child instanceof CheckBox) {
-            if (value==null) {
-                ((CheckBox)child).setChecked(false);
-            } if (value.equals("True"))
-                ((CheckBox)child).setChecked(true);
+            if (value == null) {
+                ((CheckBox) child).setChecked(false);
+            }
+            if (value.equals("True"))
+                ((CheckBox) child).setChecked(true);
             else
-                ((CheckBox)child).setChecked(false);
+                ((CheckBox) child).setChecked(false);
         } else if (child instanceof NumberPicker) {
             if (value == null || value.equals(""))
-                ((NumberPicker)child).setValue(0);
+                ((NumberPicker) child).setValue(0);
             else
-                ((NumberPicker)child).setValue(Integer.parseInt(value));
-		} else if (child instanceof ToggleButton) {
-			if (value==null) {
-				((ToggleButton)child).setChecked(false);
-			} if (value.equals("True"))
-				((ToggleButton)child).setChecked(true);
-			else
-				((ToggleButton)child).setChecked(false);
+                ((NumberPicker) child).setValue(Integer.parseInt(value));
+        } else if (child instanceof ToggleButton) {
+            if (value == null) {
+                ((ToggleButton) child).setChecked(false);
+            }
+            if (value.equals("True"))
+                ((ToggleButton) child).setChecked(true);
+            else
+                ((ToggleButton) child).setChecked(false);
         } else if (child instanceof LinearLayout) {
-            child=((LinearLayout)child).getChildAt(0);
-            ((EditText)child).setText(value);
+            child = ((LinearLayout) child).getChildAt(0);
+            ((EditText) child).setText(value);
         }
     }
+
     public void DefaultValue() {
         View child = this.getChildAt(1);
         if (child instanceof EditText) {
@@ -171,7 +175,30 @@ public class ControlLayout extends YASFAControl {
         return "0";
     }
 
-	@SuppressLint("NewApi")
+    public void EditFocus(boolean edit) {
+        EditText label = (EditText) ((ControlLayout) this).getChildAt(0);
+        if(label==null)
+        { // Brok so fix it!
+            label = new EditText(mcontext);
+            addView(label);
+        }
+
+        if (edit) {
+            label.setClickable(true);
+            label.setEnabled(true);
+            label.setFocusable(true);
+            label.setFocusableInTouchMode(true);
+        }
+        else
+        {
+            label.setClickable(false);
+            label.setEnabled(false);
+            label.setFocusable(false);
+            label.setFocusableInTouchMode(false);
+        }
+    }
+
+    @SuppressLint("NewApi")
     public void Edit (boolean edit) {
         EditText label=(EditText)((ControlLayout) this).getChildAt(0);
         if (label==null) { // Brok so fix it!
