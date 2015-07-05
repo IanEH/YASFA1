@@ -21,6 +21,7 @@ package com.yasfa.views;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.EditText;
 
 /**
@@ -37,6 +38,15 @@ public class YEditText extends EditText {
         setShadowLayer(1.5f, -1, 1, Color.GRAY);
         setTextSize(14);
         Edit(edit);
+        this.setOnLongClickListener(new View.OnLongClickListener() {
+
+            @Override
+            public boolean onLongClick(View v) {
+                if (mMainView.Editing) {return true;}
+                return false;
+            }
+        });
+
     }
 
     public void Edit(Boolean edit) {

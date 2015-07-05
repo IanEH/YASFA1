@@ -42,109 +42,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InflateView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="InflateView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33555555" vertical-offset="20538" max-vertical-offset="28322">
-              <caret line="1217" column="0" selection-start-line="1217" selection-start-column="0" selection-end-line="1217" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7293" max-vertical-offset="25500">
+              <caret line="449" column="24" selection-start-line="449" selection-start-column="20" selection-end-line="449" selection-end-column="32" />
               <folding>
                 <element signature="e#0#66095#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#4066#4067#0" expanded="true" />
-                <element signature="e#4102#4103#0" expanded="true" />
-                <element signature="e#4773#4774#0" expanded="true" />
-                <element signature="e#4809#4810#0" expanded="true" />
                 <element signature="e#9964#9972#0" expanded="true" />
                 <element signature="e#12206#12214#0" expanded="true" />
                 <element signature="e#13075#13083#0" expanded="true" />
-                <element signature="e#14541#15608#0" expanded="true" />
-                <element signature="e#15597#15598#0" expanded="true" />
-                <element signature="e#15721#16821#0" expanded="true" />
-                <element signature="e#15899#16536#0" expanded="true" />
-                <element signature="e#16519#16520#0" expanded="true" />
-                <element signature="e#16810#16811#0" expanded="true" />
-                <element signature="e#16917#17076#0" expanded="true" />
-                <element signature="e#17065#17066#0" expanded="true" />
-                <element signature="e#19180#19696#0" expanded="true" />
-                <element signature="e#19669#19670#0" expanded="true" />
-                <element signature="e#22395#22396#0" expanded="true" />
-                <element signature="e#22449#22450#0" expanded="true" />
-                <element signature="e#22473#22474#0" expanded="true" />
-                <element signature="e#22527#22528#0" expanded="true" />
-                <element signature="e#36185#37870#0" expanded="true" />
-                <element signature="e#36422#37783#0" expanded="true" />
-                <element signature="e#37096#37740#0" expanded="true" />
-                <element signature="e#37713#37714#0" expanded="true" />
-                <element signature="e#37764#37765#0" expanded="true" />
-                <element signature="e#37859#37860#0" expanded="true" />
-                <element signature="e#37907#39627#0" expanded="true" />
-                <element signature="e#38146#39540#0" expanded="true" />
-                <element signature="e#38530#39498#0" expanded="true" />
-                <element signature="e#39471#39472#0" expanded="true" />
-                <element signature="e#39521#39522#0" expanded="true" />
-                <element signature="e#39616#39617#0" expanded="true" />
-                <element signature="e#39841#40102#0" expanded="true" />
-                <element signature="e#40091#40092#0" expanded="true" />
-                <element signature="e#41231#42422#0" expanded="true" />
-                <element signature="e#41677#41945#0" expanded="true" />
-                <element signature="e#41914#41915#0" expanded="true" />
-                <element signature="e#42000#42242#0" expanded="true" />
-                <element signature="e#42211#42212#0" expanded="true" />
-                <element signature="e#42411#42412#0" expanded="true" />
-                <element signature="e#42459#42610#0" expanded="true" />
-                <element signature="e#42599#42600#0" expanded="true" />
-                <element signature="e#42816#46027#0" expanded="true" />
-                <element signature="e#43687#43873#0" expanded="true" />
-                <element signature="e#43854#43855#0" expanded="true" />
-                <element signature="e#44176#45698#0" expanded="true" />
-                <element signature="e#45679#45680#0" expanded="true" />
-                <element signature="e#45743#45938#0" expanded="true" />
-                <element signature="e#45915#45916#0" expanded="true" />
-                <element signature="e#46015#46016#0" expanded="true" />
-                <element signature="e#46125#46343#0" expanded="true" />
-                <element signature="e#46331#46332#0" expanded="true" />
-                <element signature="e#46433#52275#0" expanded="true" />
-                <element signature="e#47466#49015#0" expanded="true" />
-                <element signature="e#47739#48896#0" expanded="true" />
-                <element signature="e#48869#48870#0" expanded="true" />
-                <element signature="e#48996#48997#0" expanded="true" />
-                <element signature="e#49061#49247#0" expanded="true" />
-                <element signature="e#49228#49229#0" expanded="true" />
-                <element signature="e#49553#51950#0" expanded="true" />
-                <element signature="e#50009#51619#0" expanded="true" />
-                <element signature="e#51584#51585#0" expanded="true" />
-                <element signature="e#51931#51932#0" expanded="true" />
-                <element signature="e#51995#52186#0" expanded="true" />
-                <element signature="e#52167#52168#0" expanded="true" />
-                <element signature="e#52263#52264#0" expanded="true" />
-                <element signature="e#52518#52968#0" expanded="true" />
-                <element signature="e#52953#52954#0" expanded="true" />
-                <element signature="e#53066#55991#0" expanded="true" />
-                <element signature="e#54951#55628#0" expanded="true" />
-                <element signature="e#55605#55606#0" expanded="true" />
-                <element signature="e#55677#55888#0" expanded="true" />
-                <element signature="e#55865#55866#0" expanded="true" />
-                <element signature="e#55976#55977#0" expanded="true" />
-                <element signature="e#56113#58576#0" expanded="true" />
-                <element signature="e#57711#58253#0" expanded="true" />
-                <element signature="e#58234#58235#0" expanded="true" />
-                <element signature="e#58298#58489#0" expanded="true" />
-                <element signature="e#58470#58471#0" expanded="true" />
-                <element signature="e#58565#58566#0" expanded="true" />
-                <element signature="e#58713#59069#0" expanded="true" />
-                <element signature="e#59054#59055#0" expanded="true" />
-                <element signature="e#59175#61911#0" expanded="true" />
-                <element signature="e#61232#61548#0" expanded="true" />
-                <element signature="e#61525#61526#0" expanded="true" />
-                <element signature="e#61597#61808#0" expanded="true" />
-                <element signature="e#61785#61786#0" expanded="true" />
-                <element signature="e#61896#61897#0" expanded="true" />
-                <element signature="e#62440#64231#0" expanded="true" />
-                <element signature="e#64216#64217#0" expanded="true" />
-                <element signature="e#64708#64994#0" expanded="true" />
-                <element signature="e#64978#64979#0" expanded="true" />
-                <element signature="e#65634#65993#0" expanded="true" />
-                <element signature="e#65974#65975#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,7 +61,7 @@
       <file leaf-file-name="ActivityThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://E:/Android/sdk/sources/android-21/android/app/ActivityThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="36635" max-vertical-offset="85918">
+            <state vertical-scroll-proportion="0.0" vertical-offset="37417" max-vertical-offset="85918">
               <caret line="2337" column="0" selection-start-line="2337" selection-start-column="0" selection-end-line="2337" selection-end-column="0" />
               <folding />
             </state>
@@ -163,7 +71,7 @@
       <file leaf-file-name="ZygoteInit.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://E:/Android/sdk/sources/android-21/com/android/internal/os/ZygoteInit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13005" max-vertical-offset="14790">
+            <state vertical-scroll-proportion="0.0" vertical-offset="14059" max-vertical-offset="15623">
               <caret line="827" column="0" selection-start-line="827" selection-start-column="0" selection-end-line="827" selection-end-column="0" />
               <folding />
             </state>
@@ -173,11 +81,9 @@
       <file leaf-file-name="FormSerialize.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/FormSerialize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5135136" vertical-offset="3162" max-vertical-offset="18649">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="18394">
               <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#73281#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,7 +91,7 @@
       <file leaf-file-name="TextToSpeech.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://E:/Android/sdk/sources/android-21/android/speech/tts/TextToSpeech.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="38012">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2516" max-vertical-offset="39168">
               <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
               <folding />
             </state>
@@ -195,8 +101,31 @@
       <file leaf-file-name="SayLayout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="2329">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YEditText.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.294" vertical-offset="210" max-vertical-offset="1241">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="27" />
+              <folding>
+                <element signature="e#1328#1540#0" expanded="true" />
+                <element signature="e#1529#1530#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YASFAControl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="1479">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,33 +134,9 @@
       <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="3077">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="3230">
               <caret line="104" column="38" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#6774#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ButtonLayout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ButtonLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3508" max-vertical-offset="4811">
-              <caret line="262" column="55" selection-start-line="250" selection-start-column="19" selection-end-line="276" selection-end-column="53" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBInterface.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/DBInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="6145" max-vertical-offset="13396">
-              <caret line="373" column="21" selection-start-line="373" selection-start-column="21" selection-end-line="373" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#38374#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -239,7 +144,7 @@
       <file leaf-file-name="ControlLayout.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2698" max-vertical-offset="4199">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="4828">
               <caret line="87" column="91" selection-start-line="87" selection-start-column="91" selection-end-line="87" selection-end-column="91" />
               <folding />
             </state>
@@ -291,17 +196,17 @@
         <option value="$PROJECT_DIR$/src/com/yasfa/views/SliderLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/SpinnerLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/TimeButton.java" />
-        <option value="$PROJECT_DIR$/src/com/yasfa/views/YEditText.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/DrawLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/DataList.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java" />
-        <option value="$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/DBInterface.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/ControlLayout.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/FormSerialize.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/yasfa/views/InflateView.java" />
+        <option value="$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java" />
+        <option value="$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java" />
+        <option value="$PROJECT_DIR$/src/com/yasfa/views/YEditText.java" />
       </list>
     </option>
   </component>
@@ -309,8 +214,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="593" />
-    <option name="y" value="-15" />
+    <option name="x" value="512" />
+    <option name="y" value="179" />
     <option name="width" value="1502" />
     <option name="height" value="979" />
   </component>
@@ -496,11 +401,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane />
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,7 +421,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0123456789ABCDEF" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="f80bd6ae" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="test3" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -752,7 +657,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="593" y="-15" width="1502" height="979" extended-state="0" />
+    <frame x="512" y="179" width="1502" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -760,28 +665,28 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32949308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41589862" sideWeight="0.8576799" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19354838" sideWeight="0.6079484" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39900866" sideWeight="0.48744643" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29608294" sideWeight="0.5021482" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31592357" sideWeight="0.49785176" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31682026" sideWeight="0.49785176" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31592357" sideWeight="0.49785176" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31592357" sideWeight="0.49785176" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09452202" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32841069" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3076037" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30700636" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.056962024" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41589862" sideWeight="0.8576799" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976957" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1205,7 +1110,7 @@
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="e#0#27661#0" expanded="true" />
-            <element signature="e#20134#20166#0" expanded="true" />
+            <element signature="e#20134#20166#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1356,26 +1261,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1088">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/PictureList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5424" max-vertical-offset="8364">
           <caret line="411" column="16" selection-start-line="411" selection-start-column="16" selection-end-line="411" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="745" max-vertical-offset="1479">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="0" selection-end-line="83" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1400,9 +1289,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6145" max-vertical-offset="13396">
           <caret line="373" column="21" selection-start-line="373" selection-start-column="21" selection-end-line="373" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#38374#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,6 +1325,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="3077">
+          <caret line="104" column="38" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YASFAControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="1479">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7293" max-vertical-offset="25500">
+          <caret line="449" column="24" selection-start-line="449" selection-start-column="20" selection-end-line="449" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#66095#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#9964#9972#0" expanded="true" />
+            <element signature="e#12206#12214#0" expanded="true" />
+            <element signature="e#13075#13083#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/FormSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="19550">
+          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://E:/Android/sdk/sources/android-21/android/app/ActivityThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="36635" max-vertical-offset="85918">
@@ -1446,136 +1379,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/SayLayout.java">
+    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/YEditText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="2329">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/FormSerialize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5135136" vertical-offset="3162" max-vertical-offset="18649">
-          <caret line="247" column="0" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.294" vertical-offset="210" max-vertical-offset="1241">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="27" />
           <folding>
-            <element signature="e#0#73281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="3077">
-          <caret line="104" column="38" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#6774#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/yasfa/views/InflateView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33555555" vertical-offset="20538" max-vertical-offset="28322">
-          <caret line="1217" column="0" selection-start-line="1217" selection-start-column="0" selection-end-line="1217" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#66095#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#4066#4067#0" expanded="true" />
-            <element signature="e#4102#4103#0" expanded="true" />
-            <element signature="e#4773#4774#0" expanded="true" />
-            <element signature="e#4809#4810#0" expanded="true" />
-            <element signature="e#9964#9972#0" expanded="true" />
-            <element signature="e#12206#12214#0" expanded="true" />
-            <element signature="e#13075#13083#0" expanded="true" />
-            <element signature="e#14541#15608#0" expanded="true" />
-            <element signature="e#15597#15598#0" expanded="true" />
-            <element signature="e#15721#16821#0" expanded="true" />
-            <element signature="e#15899#16536#0" expanded="true" />
-            <element signature="e#16519#16520#0" expanded="true" />
-            <element signature="e#16810#16811#0" expanded="true" />
-            <element signature="e#16917#17076#0" expanded="true" />
-            <element signature="e#17065#17066#0" expanded="true" />
-            <element signature="e#19180#19696#0" expanded="true" />
-            <element signature="e#19669#19670#0" expanded="true" />
-            <element signature="e#22395#22396#0" expanded="true" />
-            <element signature="e#22449#22450#0" expanded="true" />
-            <element signature="e#22473#22474#0" expanded="true" />
-            <element signature="e#22527#22528#0" expanded="true" />
-            <element signature="e#36185#37870#0" expanded="true" />
-            <element signature="e#36422#37783#0" expanded="true" />
-            <element signature="e#37096#37740#0" expanded="true" />
-            <element signature="e#37713#37714#0" expanded="true" />
-            <element signature="e#37764#37765#0" expanded="true" />
-            <element signature="e#37859#37860#0" expanded="true" />
-            <element signature="e#37907#39627#0" expanded="true" />
-            <element signature="e#38146#39540#0" expanded="true" />
-            <element signature="e#38530#39498#0" expanded="true" />
-            <element signature="e#39471#39472#0" expanded="true" />
-            <element signature="e#39521#39522#0" expanded="true" />
-            <element signature="e#39616#39617#0" expanded="true" />
-            <element signature="e#39841#40102#0" expanded="true" />
-            <element signature="e#40091#40092#0" expanded="true" />
-            <element signature="e#41231#42422#0" expanded="true" />
-            <element signature="e#41677#41945#0" expanded="true" />
-            <element signature="e#41914#41915#0" expanded="true" />
-            <element signature="e#42000#42242#0" expanded="true" />
-            <element signature="e#42211#42212#0" expanded="true" />
-            <element signature="e#42411#42412#0" expanded="true" />
-            <element signature="e#42459#42610#0" expanded="true" />
-            <element signature="e#42599#42600#0" expanded="true" />
-            <element signature="e#42816#46027#0" expanded="true" />
-            <element signature="e#43687#43873#0" expanded="true" />
-            <element signature="e#43854#43855#0" expanded="true" />
-            <element signature="e#44176#45698#0" expanded="true" />
-            <element signature="e#45679#45680#0" expanded="true" />
-            <element signature="e#45743#45938#0" expanded="true" />
-            <element signature="e#45915#45916#0" expanded="true" />
-            <element signature="e#46015#46016#0" expanded="true" />
-            <element signature="e#46125#46343#0" expanded="true" />
-            <element signature="e#46331#46332#0" expanded="true" />
-            <element signature="e#46433#52275#0" expanded="true" />
-            <element signature="e#47466#49015#0" expanded="true" />
-            <element signature="e#47739#48896#0" expanded="true" />
-            <element signature="e#48869#48870#0" expanded="true" />
-            <element signature="e#48996#48997#0" expanded="true" />
-            <element signature="e#49061#49247#0" expanded="true" />
-            <element signature="e#49228#49229#0" expanded="true" />
-            <element signature="e#49553#51950#0" expanded="true" />
-            <element signature="e#50009#51619#0" expanded="true" />
-            <element signature="e#51584#51585#0" expanded="true" />
-            <element signature="e#51931#51932#0" expanded="true" />
-            <element signature="e#51995#52186#0" expanded="true" />
-            <element signature="e#52167#52168#0" expanded="true" />
-            <element signature="e#52263#52264#0" expanded="true" />
-            <element signature="e#52518#52968#0" expanded="true" />
-            <element signature="e#52953#52954#0" expanded="true" />
-            <element signature="e#53066#55991#0" expanded="true" />
-            <element signature="e#54951#55628#0" expanded="true" />
-            <element signature="e#55605#55606#0" expanded="true" />
-            <element signature="e#55677#55888#0" expanded="true" />
-            <element signature="e#55865#55866#0" expanded="true" />
-            <element signature="e#55976#55977#0" expanded="true" />
-            <element signature="e#56113#58576#0" expanded="true" />
-            <element signature="e#57711#58253#0" expanded="true" />
-            <element signature="e#58234#58235#0" expanded="true" />
-            <element signature="e#58298#58489#0" expanded="true" />
-            <element signature="e#58470#58471#0" expanded="true" />
-            <element signature="e#58565#58566#0" expanded="true" />
-            <element signature="e#58713#59069#0" expanded="true" />
-            <element signature="e#59054#59055#0" expanded="true" />
-            <element signature="e#59175#61911#0" expanded="true" />
-            <element signature="e#61232#61548#0" expanded="true" />
-            <element signature="e#61525#61526#0" expanded="true" />
-            <element signature="e#61597#61808#0" expanded="true" />
-            <element signature="e#61785#61786#0" expanded="true" />
-            <element signature="e#61896#61897#0" expanded="true" />
-            <element signature="e#62440#64231#0" expanded="true" />
-            <element signature="e#64216#64217#0" expanded="true" />
-            <element signature="e#64708#64994#0" expanded="true" />
-            <element signature="e#64978#64979#0" expanded="true" />
-            <element signature="e#65634#65993#0" expanded="true" />
-            <element signature="e#65974#65975#0" expanded="true" />
+            <element signature="e#1328#1540#0" expanded="true" />
+            <element signature="e#1529#1530#0" expanded="true" />
           </folding>
         </state>
       </provider>

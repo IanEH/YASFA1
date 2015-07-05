@@ -45,7 +45,8 @@ public class SayLayout extends YASFAControl {
 
         MainLayout = context;
         label = new YEditText(context,true);
-        //label.setTextColor(Color.BLUE);
+        label.setSingleLine();
+
         this.addView(label);
     }
 
