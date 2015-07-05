@@ -75,12 +75,17 @@ public class FormSerialize  {
         try {
         	if (DB==null) {
                 DB = ctx.openOrCreateDatabase("YASFA.db", ctx.MODE_PRIVATE, null);
-                DB.execSQL("CREATE TABLE IF NOT EXISTS YASFAFormV1  (ID INTEGER PRIMARY KEY,Name VARCHAR,Type VARCHAR,LockCode VARCHAR,Rotation INTEGER)");
+                DB.execSQL("CREATE TABLE IF NOT EXISTS YASFAFormV1  (ID INTEGER PRIMARY KEY,Name VARCHAR,Type VARCHAR,LockCode VARCHAR,LanguageCode VARCHAR,Rotation INTEGER)");
                 DB.execSQL("CREATE TABLE IF NOT EXISTS YASFAObjectV1 (ID INTEGER PRIMARY KEY,FormID INTEGER,Name VARCHAR,Type VARCHAR, x INTEGER,y INTEGER,width INTEGER,height INTEGER,Picture BLOB)");
                 DB.execSQL("CREATE TABLE IF NOT EXISTS YASFAControlV1 (ID INTEGER PRIMARY KEY,FormID INTEGER,ObjectID INTEGER,Name VARCHAR,Type VARCHAR, x INTEGER,y INTEGER,width INTEGER,height INTEGER)");
         	}
         } catch (Exception e) {
         	int i=0;
+        }
+        try { // rEMOVE THIS
+            DB.execSQL("ALTER TABLE  YASFAFormV1 ADD COLUMN LanguageCode VARCHAR");
+        } catch (Exception e1) {
+            int i2=0;
         }
         try { // rEMOVE THIS
             DB.execSQL("ALTER TABLE  YASFAFormV1 ADD COLUMN LockCode VARCHAR");
@@ -112,6 +117,21 @@ public class FormSerialize  {
         } catch (Exception e) {
         }
  	}
+
+
+    public void SaveLanguageCode(String Name,String LanguageCode) {
+        try {
+
+            if (Name.equals("")) return;
+            openDB();
+            Cursor c = DB.rawQuery("SELECT * FROM YASFAFormV1 WHERE Name like  '" + Name + "'", null);
+            c.moveToFirst();
+            int FormID = c.getInt(c.getColumnIndex("ID"));
+            DB.execSQL("UPDATE YASFAFormV1 Set LanguageCode = '" + LanguageCode + "' WHERE ID = '" + FormID + "'");
+            closeDB();
+        } catch (Exception ex) {
+        }
+    }
 
     @SuppressLint("NewApi")
     public void SaveLock(String Name,String LockCode) {
@@ -210,7 +230,7 @@ public class FormSerialize  {
     }
 
     @SuppressLint("NewApi")
-    public void SaveForm(String Name,RelativeLayout mainRelativeLayout,InflateView MainView,String LockCode) {
+    public void SaveForm(String Name,RelativeLayout mainRelativeLayout,InflateView MainView,String LockCode,String LanguageCode) {
         try {
 
             if (Name.equals("")) return;
@@ -224,7 +244,7 @@ public class FormSerialize  {
                 c.moveToFirst();
             }
             int FormID = c.getInt(c.getColumnIndex("ID"));
-            DB.execSQL("UPDATE YASFAFormV1 Set LockCode = '"+LockCode+"' WHERE  Name like '"+Name+"'");
+            DB.execSQL("UPDATE YASFAFormV1 Set LockCode = '"+LockCode+"', LanguageCode = '"+LanguageCode+"' WHERE  Name like '"+Name+"'");
 
             DB.execSQL("DELETE FROM YASFAObjectV1 WHERE FormID = '"+FormID+"'");
                DB.execSQL("DELETE FROM YASFAControlV1 WHERE FormID = '"+FormID+"'");
@@ -531,6 +551,7 @@ public class FormSerialize  {
             }
             int FormID = c.getInt(c.getColumnIndex("ID"));
             MainView.LockCode  = c.getString(c.getColumnIndex("LockCode"));
+            MainView.mLanguageCode  = c.getString(c.getColumnIndex("LanguageCode"));
 
 
             Cursor c1 = DB.rawQuery("SELECT ID,FormID,Name,Type,x,y,width,height,Picture FROM YASFAObjectV1 WHERE FormID =  '"+FormID+"'" , null);

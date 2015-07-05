@@ -85,7 +85,7 @@ public class ControlLayout extends YASFAControl {
             for (int i = 0; i < count; i++) {
                 final View child = ((NumberPicker) np).getChildAt(i);
                 if (child instanceof ImageButton) {
-                    if (ypos >= child.getY() && ypos <= child.getY() + child.getHeight()) {
+                    if (ypos >= child.getY() && ypos <= child.getY() + child.getHeight()-10) {
                         return false;
                     }
                 }

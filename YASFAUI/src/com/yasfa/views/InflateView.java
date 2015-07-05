@@ -18,6 +18,7 @@ package com.yasfa.views;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import com.yasfa.views.DBInterface.Direction;
@@ -99,6 +100,8 @@ public class InflateView extends Activity {
     public Long ParentRowID=-1L;
     public String ParentRow="";
     public String LockCode="";
+    public String mLanguageCode="";
+
 
     static String lasttext="";
     public void Say(String text) {
@@ -308,6 +311,21 @@ public class InflateView extends Activity {
 
     float[] orientation;
 
+    private Locale GetLanguageLocale(String Code) {
+
+        if (Code==null || Code.equals("") || Code.equals("UK")) {
+            return Locale.UK;
+        }
+        Locale[] locales = Locale.getAvailableLocales();
+        List<Locale> localeList = new ArrayList<Locale>();
+        for (Locale locale : locales) {
+            if (locale.getLanguage().toUpperCase().equals(Code.toUpperCase())) {
+                return locale;
+            }
+        }
+        return Locale.UK;
+    }
+
     /** Called when the activity is first created. */
     @SuppressLint("NewApi")
     @Override
@@ -338,20 +356,6 @@ public class InflateView extends Activity {
     	} catch (Exception ex) {
 
     	}
-        // Voice say setup
-        if (mTts==null) {
-            mTts=new TextToSpeech(getApplicationContext(),
-                    new TextToSpeech.OnInitListener() {
-                        @Override
-                        public void onInit(int status) {
-                            if(status != TextToSpeech.ERROR){
-                                mTts.setLanguage(Locale.UK);
-                                mTts.setPitch(1f);
-                                mTts.setSpeechRate(1.1f);
-                            }
-                        }
-                    });
-        }
 
         // Kill it!
         mKillReceiver = new KillReceiver();
@@ -367,7 +371,7 @@ public class InflateView extends Activity {
 
         if (formName.equals("")) formName="Menu";
         if (formName.equals("Menu")) {
-            Utils.defaltdb(this);
+            Utils.defaltdb(this,false);
         }
         setTitle(formName);
 
@@ -532,6 +536,31 @@ public class InflateView extends Activity {
 
         Refresh(MainView.ParentRowID);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        // Voice say setup
+        if (mTts==null) {
+            try {
+                if (mLanguageCode == null) {
+                    mLanguageCode = "UK";
+                }
+                final Locale ll = GetLanguageLocale(mLanguageCode);
+
+                mTts = new TextToSpeech(getApplicationContext(),
+                        new TextToSpeech.OnInitListener() {
+                            @Override
+                            public void onInit(int status) {
+                                if (status != TextToSpeech.ERROR) {
+                                    //Locale.UK;
+                                    mTts.setLanguage(ll);
+                                    mTts.setPitch(1f);
+                                    mTts.setSpeechRate(1.1f);
+                                }
+                            }
+                        });
+            } catch(Exception ex) {
+                // Language system gone bad!
+            }
+        }
 
         dummy = new EditText(this);
         SetLayout(dummy, RelativeLayout.ALIGN_PARENT_TOP,1,0,0,0,-1,-1);
@@ -876,6 +905,198 @@ public class InflateView extends Activity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+       if (Editing) {
+           ControlManage.Edit(MainView);
+           SaveView();
+       } else {
+           super.onBackPressed();
+       }
+    }
+
+    public void SaveView(){
+        final Dialog mDialog;
+        mDialog = new Dialog(MainView);
+        mDialog.setTitle("Save View");
+        LinearLayout ll = new LinearLayout(MainView);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout ll1 = new LinearLayout(MainView);
+        final LinearLayout.LayoutParams lp = new
+                LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        mDialog.addContentView(ll, lp);
+
+        Button ok, cancel;
+
+        ok = (Button) new Button(MainView);
+        ll1.addView(ok);
+        ok.setText("Save");
+        cancel = (Button) new Button(MainView);
+        ll1.addView(cancel);
+        ll.addView(ll1);
+        cancel.setText("Cancel");
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Save...",true);
+                Thread t = new Thread(new Runnable()
+                {
+                    public void run()
+                    {
+
+                        FormSerialize fz = new FormSerialize();
+                        fz.setBaseContext(MainView.getBaseContext());
+                        fz.SaveForm(MainView.formName, MainView.mainRelativeLayout, MainView,MainView.LockCode,mLanguageCode);
+
+                        DBInterface dbz = new DBInterface();
+                        dbz.setBaseContext(MainView.getBaseContext());
+                        dbz.CreteTable(MainView.formName, MainView.mainRelativeLayout);
+                        progressDialog.dismiss();
+
+                        MainView.runOnUiThread(new Runnable() //run on ui thread
+                        {
+                            public void run() {
+
+                                try {
+                                    DBInterface dbz = new DBInterface();
+                                    dbz.setBaseContext(MainView);
+                                    MainView.RowID = dbz.Get(MainView.RowID,MainView.ParentRowID, formName, mainRelativeLayout,Direction.First);
+                                    Refresh(MainView.ParentRowID);
+                                } catch (Exception ex) {
+                                }
+                            }
+                        });
+
+                    }
+                });
+                t.start();
+                mDialog.cancel();
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Cancel...",true);
+                Thread t = new Thread(new Runnable()
+                {
+                    public void run() {
+
+                        FormSerialize fz = new FormSerialize();
+                        fz.setBaseContext(MainView.getBaseContext());
+                        fz.LoadForm(formName, mainRelativeLayout, MainView);
+
+                        progressDialog.dismiss();
+
+                        MainView.runOnUiThread(new Runnable() //run on ui thread
+                        {
+
+                            public void run() {
+
+                                try {
+
+                                    Intent myIntent = new Intent(MainView, InflateView.class);
+                                    myIntent.putExtra("formName", MainView.formName); //Optional parameters
+                                    myIntent.putExtra("ParentRowID", MainView.ParentRowID); //Optional parameters
+                                    myIntent.putExtra("ParentformName", MainView.ParentformName); //Optional parameters
+                                    myIntent.putExtra("ParentRow", MainView.ParentRow); //Optional parameters
+                                    MainView.finish();
+                                    MainView.startActivity(myIntent);
+
+                                } catch (Exception ex) {
+                                }
+                            }
+                        });
+                    }
+                });
+                t.start();
+                mDialog.cancel();
+            }
+        });
+        mDialog.show();
+    }
+
+    public void SaveApp (final String filename) {
+        final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Backup...", true);
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                Utils.copyToSD(MainView, "YASFA.db", filename + ".app");
+                Utils.copyToSD(MainView, "YASFAD.db", filename + "D.db");
+                progressDialog.dismiss();
+            }
+        });
+        t.start();
+    }
+
+    public void BackupApp() {
+        final Dialog mDialog;
+        mDialog = new Dialog(MainView);
+        mDialog.setTitle("      Backup      ");
+        LinearLayout ll = new LinearLayout(MainView);
+        ll.setOrientation(LinearLayout.VERTICAL);
+        LinearLayout ll1 = new LinearLayout(MainView);
+        final LinearLayout.LayoutParams lp = new
+                LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        mDialog.addContentView(ll, lp);
+
+
+        Button ok, cancel;
+        final EditText filename;
+        final TextView lfilename;
+
+        lfilename = (TextView) new TextView(MainView);
+        lfilename.setText("Name");
+        filename = (EditText) new EditText(MainView);
+        ll.addView(lfilename);
+        ll.addView(filename);
+        ok = (Button) new Button(MainView);
+        ll1.addView(ok);
+        ok.setText("Save");
+        cancel = (Button) new Button(MainView);
+        ll1.addView(cancel);
+        ll.addView(ll1);
+        cancel.setText("Cancel");
+        ok.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+            public void onClick(View v) {
+                mDialog.cancel();
+                if (Utils.FileExistsSD(MainView,filename.getText() + ".app")) {
+                    new AlertDialog.Builder(MainView)
+                            .setTitle("Application Exist")
+                            .setMessage("Overwrite the Application?")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    SaveApp(filename.getText().toString());
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // do nothing
+                                }
+                            })
+                            .show();
+                }
+                else{
+                    SaveApp(filename.getText().toString());
+                }
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mDialog.cancel();
+            }
+        });
+        mDialog.show();
+    }
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         if (!Editing)
         {
@@ -888,26 +1109,41 @@ public class InflateView extends Activity {
                 mDialog.setTitle("New Application");
                 LinearLayout ll = new LinearLayout(MainView);
                 ll.setOrientation(LinearLayout.VERTICAL);
-                LinearLayout ll1 = new LinearLayout(MainView);
+
                 final LinearLayout.LayoutParams lp = new
                         LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT);
                 mDialog.addContentView(ll, lp);
 
-                Button ok, cancel;
+                Button backup,ok, cancel;
+                backup = (Button) new Button(MainView);
+                backup.setText("Backup First?");
+                ll.addView(backup);
+
+                backup.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        BackupApp();
+                    }
+                });
 
                 ok = (Button) new Button(MainView);
-                ll1.addView(ok);
-                ok.setText("OK");
+                ok.setText("New App");
+                ll.addView(ok);
+
                 cancel = (Button) new Button(MainView);
-                ll1.addView(cancel);
-                ll.addView(ll1);
+                ll.addView(cancel);
+
                 cancel.setText("Cancel");
+
+
                 ok.setOnClickListener(new View.OnClickListener() {
 
 
                     @Override
                     public void onClick(View v) {
+
 
                         Utils.delete(MainView, "YASFA.db");
                         Utils.delete(MainView, "YASFAD.db");
@@ -944,7 +1180,7 @@ public class InflateView extends Activity {
                     public void onClick(View v) {
                         mDialog.cancel();
                     }
-                });
+                    });
                 mDialog.show();
 
                 return true;
@@ -956,62 +1192,7 @@ public class InflateView extends Activity {
             item4.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item4) {
-                final Dialog mDialog;
-                mDialog = new Dialog(MainView);
-                mDialog.setTitle("      Backup      ");
-                LinearLayout ll = new LinearLayout(MainView);
-                ll.setOrientation(LinearLayout.VERTICAL);
-                LinearLayout ll1 = new LinearLayout(MainView);
-                final LinearLayout.LayoutParams lp = new
-                        LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT);
-                mDialog.addContentView(ll, lp);
-
-
-                Button ok, cancel;
-                final EditText filename;
-                final TextView lfilename;
-
-                lfilename = (TextView) new TextView(MainView);
-                lfilename.setText("Name");
-                filename = (EditText) new EditText(MainView);
-                ll.addView(lfilename);
-                ll.addView(filename);
-                ok = (Button) new Button(MainView);
-                ll1.addView(ok);
-                ok.setText("OK");
-                cancel = (Button) new Button(MainView);
-                ll1.addView(cancel);
-                ll.addView(ll1);
-                cancel.setText("Cancel");
-                ok.setOnClickListener(new View.OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View v) {
-                        mDialog.cancel();
-                        final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Backup...",true);
-                        Thread t = new Thread(new Runnable()
-                        {
-                            public void run()
-                            {
-                                Utils.copyToSD(MainView, "YASFA.db", filename.getText() + ".app");
-                                Utils.copyToSD(MainView, "YASFAD.db", filename.getText() + "D.db");
-                                progressDialog.dismiss();
-                            }
-                        });
-                        t.start();
-                    }
-                });
-                cancel.setOnClickListener(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                        mDialog.cancel();
-                    }
-                });
-                mDialog.show();
-
+                    BackupApp();
                 return true;
             }
 
@@ -1020,18 +1201,33 @@ public class InflateView extends Activity {
         item5.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item4) {
-                class loadit extends LoadAFile {
+                final Dialog mDialog;
+                mDialog = new Dialog(MainView);
+                mDialog.setTitle("Restore Application");
+                LinearLayout ll = new LinearLayout(MainView);
+                ll.setOrientation(LinearLayout.VERTICAL);
+                final LinearLayout.LayoutParams lp = new
+                        LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+                mDialog.addContentView(ll, lp);
+
+                Button backup,ok,defaultdb , cancel;
+                backup = (Button) new Button(MainView);
+                backup.setText("Backup First?");
+                ll.addView(backup);
+
+                defaultdb = (Button) new Button(MainView);
+                defaultdb.setText("Default");
+                ll.addView(defaultdb);
+
+                defaultdb.setOnClickListener(new View.OnClickListener() {
+
                     @Override
-                    public void LoadFile(final String file) {
-                        final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Restore...",true);
-                        Thread t = new Thread(new Runnable()
-                        {
-                            public void run()
-                            {
-                                String nfile=file;
-                                Utils.copyFromSD(MainView, nfile, "YASFA.db");
-                                nfile = nfile.replace(".app", "D.db");
-                                Utils.copyFromSD(MainView, nfile, "YASFAD.db");
+                    public void onClick(View v) {
+                        final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Restore...", true);
+                        Thread t = new Thread(new Runnable() {
+                            public void run() {
+                                Utils.defaltdb(MainView, true);
 
                                 SharedPreferences YASFAState = MainView.getSharedPreferences("YASFAState", MODE_PRIVATE);
                                 SharedPreferences.Editor ed = YASFAState.edit();
@@ -1052,10 +1248,81 @@ public class InflateView extends Activity {
                             }
                         });
                         t.start();
+                        mDialog.cancel();
                     }
-                }
-                loadit ld = new loadit();
-                Dialog dg = MainView.CreateDialog(MainView.DIALOG_LOAD_FILE, ".app", ld);
+                });
+
+                backup.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        BackupApp();
+                    }
+                });
+
+                ok = (Button) new Button(MainView);
+                ok.setText("Restore App");
+                ll.addView(ok);
+
+                cancel = (Button) new Button(MainView);
+                ll.addView(cancel);
+                cancel.setText("Cancel");
+
+
+                ok.setOnClickListener(new View.OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View v) {
+
+
+                        class loadit extends LoadAFile {
+                            @Override
+                            public void LoadFile(final String file) {
+                                final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Restore...",true);
+                                Thread t = new Thread(new Runnable()
+                                {
+                                    public void run()
+                                    {
+                                        String nfile=file;
+                                        Utils.copyFromSD(MainView, nfile, "YASFA.db");
+                                        nfile = nfile.replace(".app", "D.db");
+                                        Utils.copyFromSD(MainView, nfile, "YASFAD.db");
+
+                                        SharedPreferences YASFAState = MainView.getSharedPreferences("YASFAState", MODE_PRIVATE);
+                                        SharedPreferences.Editor ed = YASFAState.edit();
+                                        ed.clear();
+                                        ed.putLong("ROWID", -99L);
+                                        ed.putLong("PARENTROWID", -1L);
+                                        ed.putString("FORMNAME", "");
+                                        ed.commit();
+
+                                        Intent intent = new Intent("kill");
+                                        intent.setType("text/plain");
+                                        sendBroadcast(intent);
+
+                                        Intent myIntent = new Intent(MainView, InflateView.class);
+                                        myIntent.putExtra("formName", "Menu"); //Optional parameters
+                                        MainView.startActivity(myIntent);
+                                        progressDialog.dismiss();
+                                    }
+                                });
+                                t.start();
+                            }
+                        }
+                        loadit ld = new loadit();
+                        Dialog dg = MainView.CreateDialog(MainView.DIALOG_LOAD_FILE, ".app", ld);
+                        mDialog.cancel();
+                    }
+                });
+                cancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        mDialog.cancel();
+                    }
+                });
+                mDialog.show();
 
                 return true;
             }
@@ -1149,18 +1416,80 @@ public class InflateView extends Activity {
     }
     if (Editing)
     {
-        if (LockCode.equals("")) {
-                MenuItem item7 = menu.add("Sync Flip");
-                item7.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+
+        MenuItem item8 = menu.add("Language");
+        item8.setOnMenuItemClickListener (new MenuItem.OnMenuItemClickListener(){
+            @Override
+            public boolean onMenuItemClick (MenuItem item2){
+                final Dialog mDialog;
+                mDialog=new Dialog(MainView);
+                mDialog.setTitle("Set Language Code");
+                LinearLayout ll = new LinearLayout(MainView);
+                ll.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout ll1 = new LinearLayout(MainView);
+                final LinearLayout.LayoutParams lp = new
+                        LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT);
+                mDialog.addContentView(ll,lp);
+
+
+                Button ok,cancel;
+                final EditText LanguageCode;
+                final TextView lLanguageCode;
+
+                lLanguageCode=(TextView) new TextView(MainView);
+                lLanguageCode.setText("Language Code eg UK");
+                LanguageCode=(EditText) new EditText(MainView);
+                if (mLanguageCode.trim().equals("")) {
+                    mLanguageCode = "UK";
+                }
+                LanguageCode.setText(mLanguageCode);
+                ll.addView(lLanguageCode);
+                ll.addView(LanguageCode);
+
+                ok=(Button) new Button(MainView);
+                ll1.addView(ok);
+                ok.setText("OK");
+                cancel=(Button) new Button(MainView);
+                ll1.addView(cancel);
+                ll.addView(ll1);
+                cancel.setText("Cancel");
+                ok.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public boolean onMenuItemClick(MenuItem item6) {
-                        FormSerialize fz = new FormSerialize();
-                        fz.setBaseContext(getBaseContext());
-                        fz.SyncFlip(formName);
-                        return true;
+                    public void onClick(View v) {
+                            mLanguageCode = LanguageCode.getText().toString();
+                            FormSerialize fz = new FormSerialize();
+                            fz.setBaseContext(getBaseContext());
+                            fz.SaveLanguageCode(MainView.formName, mLanguageCode);
+                            invalidateOptionsMenu();
+                            mDialog.cancel();
                     }
                 });
+                cancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+                        mDialog.cancel();
+                    }
+                });
+                mDialog.show();
+                return true;
             }
+        });
+
+
+        if (LockCode.equals("")) {
+            MenuItem item7 = menu.add("Sync Flip");
+            item7.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item6) {
+                    FormSerialize fz = new FormSerialize();
+                    fz.setBaseContext(getBaseContext());
+                    fz.SyncFlip(formName);
+                    return true;
+                }
+            });
+        }
 
             MenuItem item3 = menu.add("Grid");
             item3.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -1226,7 +1555,9 @@ public class InflateView extends Activity {
                 }
             });
         }
-        if (LockCode==null) LockCode="";
+        if (LockCode==null ) LockCode="";
+        if (LockCode.equals("\"+LockCode+\"")) LockCode="";
+
         if (LockCode.equals(""))  {
             final MenuItem item1 = menu.add ("Design");
             if (Editing) {
@@ -1244,53 +1575,27 @@ public class InflateView extends Activity {
                 public boolean onMenuItemClick (MenuItem item){
                     ControlManage.Edit(MainView);
                     if (Editing) {
-                        if (topv.getX()<scrollable.vScroll.getScrollX() || topv.getY()<scrollable.hScroll.getScrollY())
+                        /*if (topv.getX()<scrollable.vScroll.getScrollX() || topv.getY()<scrollable.hScroll.getScrollY())
                             SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX()+5, scrollable.hScroll.getScrollY()+5, 0, 0,0,0);
                         Display display = ((WindowManager)MainView.getApplicationContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
                         if (topv.getY() + topv.getHeight() > display.getHeight()+scrollable.hScroll.getScrollY() || topv.getX()+topv.getWidth()-5 > display.getWidth() +scrollable.vScroll.getScrollX())  {
                             SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX(), scrollable.hScroll.getScrollY()+5, 0, 0,0,0);
-                        }
+                        }*/
+
+                        Display display = ((WindowManager)MainView.getApplicationContext().getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+                        SetLayout(topv, RelativeLayout.ALIGN_PARENT_LEFT, scrollable.vScroll.getScrollX()+5, scrollable.hScroll.getScrollY()+5, 0, 0, display.getWidth()-20, 0);
                     }
+
                     if (!Editing) {
-                        final ProgressDialog progressDialog = ProgressDialog.show(MainView, "", "Save...",true);
-                        Thread t = new Thread(new Runnable()
-                        {
-                            public void run()
-                            {
-
-                                FormSerialize fz = new FormSerialize();
-                                fz.setBaseContext(MainView.getBaseContext());
-                                fz.SaveForm(MainView.formName, MainView.mainRelativeLayout, MainView,MainView.LockCode);
-
-                                DBInterface dbz = new DBInterface();
-                                dbz.setBaseContext(MainView.getBaseContext());
-                                dbz.CreteTable(MainView.formName, MainView.mainRelativeLayout);
-                                progressDialog.dismiss();
-
-                                MainView.runOnUiThread(new Runnable() //run on ui thread
-                                {
-                                    public void run() {
-
-                                        try {
-                                            DBInterface dbz = new DBInterface();
-                                            dbz.setBaseContext(MainView);
-                                            MainView.RowID = dbz.Get(MainView.RowID,MainView.ParentRowID, formName, mainRelativeLayout,Direction.First);
-                                            Refresh(MainView.ParentRowID);
-                                        } catch (Exception ex) {
-                                        }
-                                    }
-                                });
-
-                            }
-                        });
-                        t.start();
+                        SaveView();
                     }
 
                     if (item1.getTitle().toString().equals("Design"))
                         item1.setTitle("Run");
                     else
                         item1.setTitle("Design");
-                    invalidateOptionsMenu(); return true;
+                    invalidateOptionsMenu();
+                    return true;
 
                 }
             });

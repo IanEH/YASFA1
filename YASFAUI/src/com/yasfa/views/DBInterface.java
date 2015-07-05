@@ -377,9 +377,12 @@ public class DBInterface  {
 			    	if (NEXTID < 0 || NEXTID==ID) {
 			    		NEXTID= Get(ID,PARENTID,Name,mainRelativeLayout,Direction.Next);
 			    	}
-			    	if (NEXTID < 0 || NEXTID==ID) {
+                   if (NEXTID < 0 || NEXTID==ID) {
 			    		NEXTID= Get(ID,PARENTID,Name,mainRelativeLayout,Direction.Last);
 			    	}
+                   if (NEXTID==ID) {
+                       NEXTID=-1;
+                   }
 			    	ID = NEXTID;
 		        } catch (Exception e) {
 		        	int i=0;

@@ -33,12 +33,12 @@ import java.io.OutputStream;
  */
 public class Utils {
 
-    public static boolean defaltdb(Context context) {
+    public static boolean defaltdb(Context context,boolean overwright) {
         final String DB_DESTINATIONAPP = "/data/data/" + context.getPackageName() + "/databases/YASFA.db";
         final String DB_DESTINATIONDB = "/data/data/" + context.getPackageName() + "/databases/YASFAD.db";
 
         // Check if the database exists before copying
-        if((new File(DB_DESTINATIONAPP)).exists()==false) {
+        if((new File(DB_DESTINATIONAPP)).exists()==false || overwright) {
             try {
                 try {
                     File folder = new File("/data/data/" + context.getPackageName() + "/databases");
@@ -72,7 +72,7 @@ public class Utils {
                 String sc=ex.getMessage();
             }
         }
-        if((new File(DB_DESTINATIONDB)).exists()==false) {
+        if((new File(DB_DESTINATIONDB)).exists()==false  || overwright) {
             try {
                 // Open the .db file in your assets directory
                 InputStream is = context.getAssets().open("defaultD.db");
@@ -98,6 +98,13 @@ public class Utils {
         String from = "/data/data/" + context.getPackageName() + "/databases/"+filename;
         File file = new File(from);
         return file.delete();
+    }
+
+    public static boolean FileExistsSD(Context context,String filename) {
+        String to = getSD()+"/"+filename;
+        String from = "/data/data/" + context.getPackageName() + "/databases/"+filename;
+        File file = new File(to);
+        return file.exists();
     }
 
     public static boolean copyToSD(Context context,String filename,String toname) {
