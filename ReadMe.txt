@@ -9,7 +9,7 @@ Just by scooting about the screen[s] with a finger the words are spoken (Only En
 Hope it helps and I am interested in positive suggestions but time constraints limit my ability to react or support the app! 
 
 
-It runs on my version 4.4.2 phone and tablet but so far I have been unable to try it on other versions of Android. 
+It runs on all the version 4.4.2 and above phones and tablets I have been able to try it on. It is more usable on a tablet. 
 
 
 See the MP4 files for basic instructions.
