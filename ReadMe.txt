@@ -12,8 +12,9 @@ Hope it helps and I am interested in positive suggestions but time constraints l
 It runs on all the version 4.4.2 and above phones and tablets I have been able to try it on. It is more usable on a tablet. 
 
 
-See the MP4 files for basic instructions.
+See 
 
-To play an MP4 on some Windows versions you would need 'VideoLan' or similar!
+http://youtu.be/rDtMhRixCEA
 
-http://get.videolan.org/vlc/2.2.1/win32/vlc-2.2.1-win32.exe
+For basic instructions.
+
