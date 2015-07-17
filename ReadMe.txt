@@ -15,7 +15,7 @@ Blobs: camera, drawing, picture items; are stored at a low resolution to accommo
 The picture control only looks for items with a ‘.jpg’ extension on the SD card when importing images.  Adding an Image to a button only looks for items with a ‘.png’ extension. There's no special reason for this; it was just convenient for me.
 I only implemented a limited range of controls with no phone, email, web service or web interaction or scripting.
 
-If you add a form lock don’t forget the code. It is stored unencrypted on the app db so not very secure!
+If you add a form lock don’t forget the code. But it is stored unencrypted on the app db so not very secure!
 
 It runs on all the (Limited Number) of version 4.4.2 and above phones and tablets I have been able to try it on. It is more usable on a tablet. 
 
